@@ -5,7 +5,7 @@
 // let name =alert('what is your name?')
 
 // console.log(name)
-// alert('my name is shivam singh')
+// alert('my name is Shivam Singh')
 // prompt
 
 
@@ -29,11 +29,22 @@
 //     alert('not eligible')
 // }
 
-let redLight=confirm('is red light is on/off')
+// let redLight=confirm('is red light is on/off')
 
 
-if(redLight==true){
-    alert('stop')
+// if(redLight==true){
+//     alert('stop')
+// }else{
+//     alert('go')
+// }
+
+// Number
+let input = Number(prompt('give me a value'))
+console.log(typeof input)
+if(input>0){
+    alert(1)
+}else if(input<0){
+    alert(-1)
 }else{
-    alert('go')
+    alert(0)
 }
