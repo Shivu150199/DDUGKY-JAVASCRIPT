@@ -1,2 +1,8 @@
-marks.splice(1,6)
-console.log(marks)
+
+// let firstName='shivam'
+// let lastName='singh'
+// let role='fullstack dev'
+
+// console.log('my name is '+ firstName + ' ' +lastName +' and my role is ' +role)
+
+// console.log(`my name is ${firstName} ${lastName} and my role is ${role}`);

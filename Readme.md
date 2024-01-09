@@ -82,7 +82,7 @@ console.log(foo); // "bar"
 	console.log(foo); // ReferenceError because we're in the TDZ
 
 	let foo = 'foo';  // End of foo's TDZ
-}```
+}
 
 
 
@@ -115,4 +115,4 @@ if (a == 1) {
 
 if (a == 2 || a == 3) {
   alert( '2,3' );
-}
+}```
