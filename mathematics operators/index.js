@@ -27,3 +27,14 @@
 // // let sNum=Number(secondValue)
 
 // alert(firstValue+secondValue)
+
+
+function randomValueGenerator(min, max) {
+  let random = Math.floor(Math.random() * (max - min) + min) + 1
+  console.log(random)
+}
+
+let min = +prompt('enter a minimum value')
+let max = +prompt('ender a maximum value ')
+
+randomValueGenerator(min, max)

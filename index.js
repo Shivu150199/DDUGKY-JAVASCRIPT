@@ -340,7 +340,6 @@
 // console.log(devilalBmi)
 // console.log(sachinBMI)
 
-
 // if(devilalBmi>sachinBMI){
 //     console.log(`devi BMI (${devilalBmi}) is grater than sachin BMI ${sachinBMI} `)
 // }else{
@@ -348,9 +347,6 @@
 //        `sachin BMI (${sachinBMI}) is grater than devilal BMI ${devilalBmi} `
 //      )
 // }
-
-
-
 
 // There are two gymnastics teams: Dolphins and Shark. They compete against each other 3 times. The winner with the highest average score wins a trophy!
 
@@ -376,7 +372,6 @@
 // console.log(dolAvr)
 // let sharkAvr=(s1+s2+s3)/3
 // console.log(sharkAvr)
-
 
 // if(dolAvr>sharkAvr){
 //     console.log(`dolphins win the trophy`)
@@ -408,13 +403,10 @@
 
 // }
 
-
 // console.log(sum)
 
 // let avr=sum/arr.length
 // console.log(avr.toFixed(2))
-
-
 
 // for (let j = 0; j < dolLength; j++) {
 //   dolSum = dolSum + dol[j]
@@ -425,7 +417,6 @@
 // let dolAvr = dolSum / dol.length
 // console.log(dolAvr.toFixed(2))
 
-
 // for (let j = 0; j < sharkLength; j++) {
 //   sharkSum = sharkSum + shark[j]
 // }
@@ -435,18 +426,81 @@
 // let sharkAvr = sharkSum / shark.length
 // console.log(sharkAvr.toFixed(2))
 
-function average(arr) {
-  let n = arr.length
-  let sum = 0
-  for (let i = 0; i < n; i++) {
-    sum = sum + arr[i]
-  }
-  let avr = sum / n
-  return avr.toFixed(1)
-}
-let dol = [96, 87, 89,64,53,34,42,4]
-let shark = [88, 91, 110,65,434,34,6,6]
-let dolphinAverage=average(dol)
-console.log(dolphinAverage)
-let sharkAverage=average(shark)
-console.log(sharkAverage)
+// function average(arr) {
+//   let n = arr.length
+//   let sum = 0
+//   for (let i = 0; i < n; i++) {
+//     sum = sum + arr[i]
+//   }
+//   let avr = sum / n
+//   return avr.toFixed(1)
+// }
+// let dol = [96, 87, 89,64,53,34,42,4]
+// let shark = [88, 91, 110,65,434,34,6,6]
+// let dolphinAverage=average(dol)
+// console.log(dolphinAverage)
+// let sharkAverage=average(shark)
+// console.log(sharkAverage)
+
+// Ramesh needs a very simple tip calculator for whenever he goes to eat in a restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
+
+// Your tasks:
+
+// Calculate the tip, depending on the bill value. Create a variable called tip for this. It's not allowed to use an if...else statement (if it's easier for you, you can start with an if...else statement, and then try to convert it to a ternary operator).
+
+// Print a string to the console containing the bill value, the tip, and the final value (bill + tip).
+
+// Example: The bill was 275, the tip was 41.25, and the total value 316.25.
+
+// Note: Use the values of the bill and tip variables to construct this string. Don't hard-code them 🙂
+
+// TEST DATA: Test with different bill values: 275, 40, and 430
+
+// HINT: To calculate 20% of a value, simply multiply it by 20/100 = 0.2
+
+// HINT 2: Value X is between 50 and 300 if it's >= 50 && <= 300 😉
+
+// let bill=275
+// let tip=0
+// if(bill>=50&&bill<=300){
+// tip=bill*(15/100);
+
+// }else{
+//   tip=bill*(20/100)
+// }
+// let total=bill+tip
+// console.log(bill)
+// console.log(tip)
+// console.log(total)
+// // The bill was 275, the tip was 41.25, and the total value 316.25.
+// console.log(`the bill was ${bill} , the tip was ${tip} and the total value ${total}`)
+
+// function tipCalc(bill) {
+//   let tip = 0
+//   // if (bill >= 50 && bill <= 300) {
+//   //   tip = bill * (15 / 100)
+//   // } else {
+//   //   tip = bill * (20 / 100)
+//   // }
+//   bill >= 50 && bill <= 300
+//     ? (tip = bill * (15 / 100))
+//     : (tip = bill * (20 / 100))
+//   let total = bill + tip
+//   console.log(
+//     `the bill was ${bill} , the tip was ${tip} and the total value ${total}`
+//   )
+// }
+// tipCalc(5)
+
+// let age=16
+
+// if(age>=18){
+//   console.log('you are eligible to vote')
+// }else{
+//   console.log('not eligible')
+// }
+// // ternary operator
+// age >= 18
+//   ? console.log('eligible to vote')
+//   : console.log('not eligible')
+
