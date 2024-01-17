@@ -33,16 +33,14 @@
 
 // let student={
 //     "first name":'sachin'
-    
+
 // }
 // console.log(student["first name"])
-
-
 
 // property value short hand
 
 // function student(name,age,village){
-    
+
 //     let obj={
 //         name:age,
 //         age:name
@@ -52,7 +50,7 @@
 // let a=student('sachin',20)
 // console.log(a)
 // function students(age,name){
-    
+
 //     let obj={
 //         name,
 //         age
@@ -71,7 +69,6 @@
 //     }
 //     console.log(obj["for"])
 
-
 // key in Object
 
 // let menu={
@@ -83,7 +80,6 @@
 
 // console.log("dinn" in menu)
 
-
 // Write the code, one line for each action:
 
 // Create an empty object user.
@@ -91,9 +87,6 @@
 // Add the property surname with the value Smith.
 // Change the value of the name to Pete.
 // Remove the property name from the object.
-
-
-
 
 // let user={};
 // user.name='john'
@@ -105,9 +98,7 @@
 // delete user.surname
 // console.log(user)
 
-
 // for in loop
-
 
 // let menu={
 //     veg:'potato',
@@ -119,8 +110,7 @@
 //     for(let i in menu ){
 //         // console.log(i)
 //         console.log(menu[i])
-        
-        
+
 // //     }
 
 // let salaries = {
@@ -128,7 +118,6 @@
 //   Ann: 160,
 //   Pete: 130
 // }
-
 
 // before the call
 // let menu = {
@@ -140,7 +129,7 @@
 // for(let i in menu){
 //  if(menu[i]>200 && typeof menu[i]=='number'){
 //   menu[i]=menu[i]*2
-//  } 
+//  }
 // }
 
 // for(let i in menu){
@@ -149,12 +138,6 @@
 //   }
 // }
 // console.log(menu)
-
-
-
-
-
-
 
 // multiplyNumeric(menu);
 
@@ -165,21 +148,15 @@
 //   title: "My menu"
 // };
 
-
 // true && false
 // false && false
 // false && true
 // true && true
 
-
 // true || false //true
 // true || true // true
 // false || false // false
 // false  || true // true
-
-
-
-
 
 // let a=10
 // let b=a
@@ -190,10 +167,6 @@
 // console.log(a)//20
 // console.log(b)//10
 
-
-
-
-
 // let a=10
 // let b=20
 // 0
@@ -201,17 +174,8 @@
 // b=a-b//30-20=10
 // a=a-b//30-10=20
 
-
-
-
-
-
-
-
-
 // let a='shivam'
 // a='vishal'
-
 
 // let employee={
 // name:'sachin',
@@ -227,7 +191,6 @@
 
 // console.log(employee)
 // console.log(emp)
-
 
 // let employee = {
 //   name: 'sachin',
@@ -245,7 +208,6 @@
 // emp2.name='anand'
 // console.log(emp2)
 // console.log(employee)
-
 
 // let employee = {
 //   name: 'sachin',
@@ -267,24 +229,16 @@
 // let obj={...employee}
 // console.log(obj)
 
-
-
-
-
-
-
 // let obj={};
 
 // obj.name='yogesh'
 // obj.prof='developer'
-
 
 // obj.prof='student'
 
 // delete obj.name
 
 // console.log(obj)
-
 
 // let car={
 //   name:'BMW',
@@ -309,7 +263,6 @@
 // let car2={}
 // car2.name='Audi'
 
-
 // for(let i in car){
 // car2[i]=car[i]
 
@@ -318,7 +271,6 @@
 // console.log(car2)
 // let car2={...car}
 // let car2=Object.assign({},car)
-
 
 // let car = {
 //   name: 'BMW',
@@ -336,7 +288,6 @@
 // car.start()
 // car.stop()
 
-
 // let arr=[2,4,5]
 
 // arr.forEach((i)=>{
@@ -350,10 +301,6 @@
 //   console.log(i)
 // }
 
-
-
-
-
 // let student={
 //   name:'sachin',
 //   prof:'developer',
@@ -362,7 +309,6 @@
 //   }
 // }
 // student.sayHi()
-
 
 // let racing={
 //   numbersOFCars:100,
@@ -373,7 +319,7 @@
 //     console.log(2)
 //     console.log(3)
 //     console.log('go......')
-  
+
 //   },
 //   details:function(){
 //     console.log(`there are ${this.numbersOFCars} cars and this car race is organised in ${this.country} and city ${this.city} `)
@@ -382,7 +328,6 @@
 
 // racing.startRace()
 // racing.details()
-
 
 // let numberCounting={
 //   count:0,//1
@@ -405,8 +350,6 @@
 // numberCounting.decreaseCount()
 // console.log(numberCounting.count)
 
-
-
 // let calculator={
 
 // a:10,
@@ -425,17 +368,15 @@
 // },
 // }
 
-
 // console.log(calculator)
 // calculator.add()//
 // calculator.mult()
 
-// we have to create a racing car 
+// we have to create a racing car
 // initial speed =10
 
 // we have to create a gearUp method = this increase the speed +10
 // and create gearDown method this decrease the speed -10
-
 
 // let racing={}
 
@@ -463,9 +404,6 @@
 // racing.gearDown()
 // console.log(racing.initialSpeed)
 
-
-
-
 //constructor//
 
 // function Car(name,color,engine,owner){
@@ -483,21 +421,165 @@
 // let audi=new Car('Audi','Blue','g11','Satish')
 // console.log(audi)
 
+// function Bia(name,studentId,mobile,email,domain){
+// this.name=name,
+// this.studentId=studentId,
+// this.mobile=mobile,
+// this.email=email,
+// this.domain=domain,
+// this.address='Hostel',
+// this.section='Bia3',
+// this.gender='male'}
+
+// let satish=new Bia('satish',1,'45723845','satish@gmail.com','developer')
+// let yogesh=new Bia('Yogesh','2','34523845,'yogesh@gmail.com','developer')
+// console.log(satish)
+// console.log(yogesh)
+
+// concat
+// forEach
+// indexOf
+// lastIndex
+// includes
+// find filter
+// sort
+// map
+
+// let arr=[
+//   { name: 'John', id: 123, marks: 98 },
+//   { name: 'Baba', id: 101, marks: 23 },
+//   { name: 'yaga', id: 200, marks: 45 },
+//   { name: 'Wick', id: 115, marks: 75 },
+// ]
+
+// if marks>50
+
+// let obj={
+//   width:200,
+//   height:300,
+//   title:'satish'
+// }
+// console.log(obj)
+// for(let i in obj){
+// // console.log(obj[i])
+// if(typeof obj[i]=='number'){
+//   obj[i]=obj[i]*2
+// }
+
+// }
+// console.log(obj)
+
+// push = add the value at last index
+//unshift = add value at 0 index
+// pop remove from last indexedDB
+// shift remove from zero index
+
+// slice = slice ( 1 ,8)
+
+// splice(startingIndex ,count,more Items)
+
+// let arr=[3,6,8,3,9,4]
+// console.log(arr)
+// arr.splice(3,0,34,35)
+
+// console.log(arr)
+
+// let a=[34,4,45,7,'satish','yogesh']
+// let b=[3,346,65,4,43,74]
+// let d=[23,345,7,86]
+// // let c=a.concat(b).concat(d)
+// // console.log(c)
+// let c=[...a,...b,...d]//by spread operator introduced in es6
+// console.log(c)
+
+// let student1 = [
+//   { name: 'yogesh', section: 'bia3' },
+//   { name: 'satish', section: 'bia3' }
+ 
+// ]
+
+// let student2 = [
+//   { name: 'jeet', section: 'bia4' },
+//   { name: 'mayank', section: 'bia4' }
+// ]
+
+// // let allStudents=student1.concat(student2)
+// let allStudents=[...student1,...student2]
 
 
-function Bia(name,studentId,mobile,email,domain){
-this.name=name,
-this.studentId=studentId,
-this.mobile=mobile,
-this.email=email,
-this.domain=domain,
-this.address='Hostel',
-this.section='Bia3',
-this.gender='male'}
+// console.log(allStudents)
+
+// let student1 = [
+//   { name: 'yogesh', section: 'bia3' },
+//   { name: 'satish', section: 'bia3' },
+//   { name: 'jeet', section: 'bia4' },
+//   { name: 'mayank', section: 'bia4' }
+// ]
+
+// for(let item of student1){
+//   if(item.name=='yogesh'){
+//     console.log(student1.indexOf(item))
+//   }
+// }
+// item = { name: 'yogesh', section: 'bia3' }
+
+// let arr=[32,544,42,566,453,42,23,42,42,42]
+//indexOf
+// let result=arr.indexOf(42)
+// console.log(result)
+
+// for(let i of arr){
+//   if(i==42){
+//     console.log(arr.indexOf(i))
+//     break;
+//   }
+// }
 
 
 
-let satish=new Bia('satish',1,'45723845','satish@gmail.com','developer')
-let yogesh=new Bia('Yogesh','2','34523845,'yogesh@gmail.com','developer')
-console.log(satish)
-console.log(yogesh)
+//last index
+
+// let arr=[34,543,74,856,34,345,54,647,456,5678,34,56,7]
+// console.log(arr.LastIndexOf(34))
+
+
+//includes
+// console.log(arr.includes(74345))
+
+//foreach method
+
+
+
+// let arr=[34,543,74,856]
+
+// // function myFun(){
+
+// // }
+
+// console.log(arr)
+// let result=[]
+//  arr.forEach((item)=>{
+// // console.log(item)
+// // console.log(index)
+// // console.log(array)
+// // console.log(`item ${item} in index ${index} of array ${array}`)
+// // item=item+2
+// result.push(item+2)
+
+// })
+// console.log(result)
+
+let student = [
+  { name: 'yogesh', section: 'bia3' ,marks:99},
+  { name: 'satish', section: 'bia3' ,marks:32},
+  { name: 'jeet', section: 'bia4' ,marks:99},
+  { name: 'mayank', section: 'bia4',marks:46 }
+]
+
+let passedStudnets=[]
+student.forEach((item)=>{
+if(item.marks>33){
+  passedStudnets.push(item.section)
+}
+})
+console.log(passedStudnets)
