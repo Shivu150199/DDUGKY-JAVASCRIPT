@@ -569,17 +569,124 @@
 // })
 // console.log(result)
 
-let student = [
-  { name: 'yogesh', section: 'bia3' ,marks:99},
-  { name: 'satish', section: 'bia3' ,marks:32},
-  { name: 'jeet', section: 'bia4' ,marks:99},
-  { name: 'mayank', section: 'bia4',marks:46 }
-]
 
-let passedStudnets=[]
-student.forEach((item)=>{
-if(item.marks>33){
-  passedStudnets.push(item.section)
-}
-})
-console.log(passedStudnets)
+// let student = [
+//   { name: 'yogesh', section: 'bia3' ,marks:99},
+//   { name: 'satish', section: 'bia3' ,marks:32},
+//   { name: 'jeet', section: 'bia4' ,marks:99},
+//   { name: 'mayank', section: 'bia4',marks:46 }
+// ]
+
+// student.forEach((item,index,array)=>{
+// console.log(item)
+// console.log(index)
+// console.log(array)
+// })
+
+
+// let num=[2,4,6,7,3,9]
+
+// num.map((item)=>{
+
+// })
+
+// let student = [
+//   { name: 'yogesh', section: 'bia2', marks: 98 },
+//   { name: 'satish', section: 'bia3', marks: 99 },
+//   { name: 'jeet', section: 'bia4', marks: 20 },
+//   { name: 'mayank', section: 'bia2', marks: 99 },
+// ]
+
+// let pass=student.filter((item)=>item.section=='bia3')
+// console.log(pass)
+
+// let mayank=student.find((item)=>item.marks==99)
+// console.log(mayank)
+
+
+// let name = ['jeet', 'dharma', 'devi']
+// let a=[8,5,3,1]
+//
+// a.sort((a,b)=>b-a)
+// console.log(a)
+
+
+// let b=[99,65,34,675,23]
+
+// b.sort((a,b)=>b-a)
+// a=34
+// b=675
+// console.log(b)
+
+
+// let student = [
+// { name: 'yogesh', section: 'bia2', marks: 98 },
+// { name: 'satish', section: 'bia3', marks: 77 },
+//   { name: 'jeet', section: 'bia4', marks: 20 },
+//   { name: 'mayank', section: 'bia2', marks: 99 },
+// ]
+
+// student.sort((a,b)=>b.marks-a.marks)
+// console.log(student)
+
+// let employee=[
+//   {name:'ranjit',salary:1200000},
+//   {name:'mayank',salary:2500000},
+//   {name:'yogesh',salary:1500000}
+// ]
+
+// employee.sort((a,b)=>a.salary-b.salary)
+// console.log(employee)
+
+// let num=[1,2,3,4,7]
+// let sum=0;
+// for(let i of num){
+//   sum=sum+i
+// }
+// for(let i=0;i<num.length;i++){
+//   sum=sum+num[i]
+// }
+
+// for(let i in num){
+//   sum=sum+num[i]
+// }
+// console.log(sum)
+
+
+// let num = [1, 2, 3, 4, 7]
+// let a=num.reduce((acc,curr)=>acc*curr
+// ,1)
+// console.log(a)
+
+// let i=0
+// let mul=1
+// while(i<num.length){//0<5 1<5 2<5
+// mul=mul*num[i]//1=1*2=2
+// i++
+// }
+// console.log(mul)
+
+// reduce(accumulator,current value),initialvalue
+// let a=num.reduce((acc,cur)=>acc*cur
+
+// ,0)
+
+// console.log(a)
+
+// let employee = [
+//   { name: 'Ranjit', salary: 1200000 },
+//   { name: 'mayank', salary: 2500000 },
+//   { name: 'yogesh', salary: 1500000 },
+// ]
+// let salary=[]
+// employee.forEach((item)=>
+// salary.push(item.salary)
+// )
+// console.log(salary)
+
+// let totalSalary=salary.reduce((acc,curr)=>acc+curr,0)
+// console.log(totalSalary)
+// let a=employee.reduce((acc,curr,item)=>
+// console.log(item)
+// ,0)
+// console.log(a)
