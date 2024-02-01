@@ -12,6 +12,7 @@ height:100vh;
     justify-content: center;
     align-items: center;
     background:#15b5ea;
+    flex-direction:column;
 }
 form{
     display:flex;
@@ -48,6 +49,11 @@ button{
     background:#23a4dc;
 }
 
-.main>p{
+.result{
+    margin-top:30px;
+    font-size:2rem;
+    font-weight:700;
+    /* color:white; */
     
+
 }
