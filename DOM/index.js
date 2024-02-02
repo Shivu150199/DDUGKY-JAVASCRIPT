@@ -18,3 +18,8 @@
 
 // const para=document.querySelector('.para')
 // console.log(para.innerHTML)
+
+
+// function sayHello(){
+//     console.log('hello')
+// }
