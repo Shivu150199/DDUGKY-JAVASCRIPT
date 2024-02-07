@@ -23,3 +23,27 @@
 // function sayHello(){
 //     console.log('hello')
 // }
+
+
+// btn.addEventListener('click',()=>{
+
+// let p=document.querySelector('p')
+// p.remove();
+
+
+
+// })
+
+
+btn2.addEventListener('click',()=>{
+let p=document.createElement('p')
+p.innerText='my name is shubham'
+let div=document.querySelector('.main')
+div.append(p)
+
+
+
+
+})
+
+
