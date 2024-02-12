@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      section {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .card {
+        width: 200px;
+        height: 200px;
+        padding: 30px;
+        border: 20px solid red;
+
+        overflow: scroll;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="card">
+        <h2>title</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
+          nostrum.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
+          nostrum. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Accusantium, eveniet nam? Accusamus eum blanditiis repellendus libero
+          eligendi atque excepturi ea commodi, ratione molestiae tenetur fuga,
+          beatae quo dignissimos asperiores at cumque nisi id earum voluptate,
+          laborum expedita maiores? Velit porro sint voluptate quos delectus
+          commodi! Quidem eius nihil illum sunt.
+        </p>
+      </div>
+    </section>
+
+    <script>
+      let card = document.querySelector('.card')
+      card.addEventListener('scroll', () => {
+        // console.log('hello')
+        console.log(card.scrollTop)
+        // console.log(card.scrollHeight)
+        // console.log(card.clientHeight)
+      })
+    </script>
+  </body>
+</html>
