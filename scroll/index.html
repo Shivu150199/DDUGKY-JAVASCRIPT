@@ -15,42 +15,81 @@
 
       .card {
         width: 200px;
-        height: 200px;
+        height: 300px;
         padding: 30px;
         border: 20px solid red;
 
         overflow: scroll;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
       }
     </style>
   </head>
   <body>
     <section>
       <div class="card">
-        <h2>title</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
-          nostrum.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
-          nostrum. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Accusantium, eveniet nam? Accusamus eum blanditiis repellendus libero
-          eligendi atque excepturi ea commodi, ratione molestiae tenetur fuga,
-          beatae quo dignissimos asperiores at cumque nisi id earum voluptate,
-          laborum expedita maiores? Velit porro sint voluptate quos delectus
-          commodi! Quidem eius nihil illum sunt.
-        </p>
+        <ul></ul>
       </div>
     </section>
 
     <script>
-      let card = document.querySelector('.card')
-      card.addEventListener('scroll', () => {
+      // console.log(document.querySelector('.card').getBoundingClientRect())
+      // console.log(window)
+      // for (let i = 0; i <= 500; i++) {
+      //   let div = document.createElement('div')
+      //   div.innerText = `item ${i}`
+      //   document.documentElement.append(div)
+      // }
+      // window.addEventListener('scroll', () => {
+      //   // console.log(window.pageYOffset)
+      //   // console.log(window.innerHeight)
+      // })
+
+      // console.log(window)
+      // let card = document.querySelector('.card')
+      // card.addEventListener('scroll', () => {
+
+      //   // console.log('hello')
+      //   // console.log(card.scrollTop)
+      //   // console.log(card.scrollHeight)
+      //   // console.log(card.clientHeight)
+
+      // })
+
+      let count = 0
+
+      for (; count <= 20; count++) {
         // console.log('hello')
+        let li = document.createElement('li')
+        li.innerText = `item${count}`
+        let ul = document.querySelector('ul')
+        ul.append(li)
+      }
+
+      let card = document.querySelector('.card')
+
+      card.addEventListener('scroll', () => {
+        // console.log(card.scrollHeight)//1000
         console.log(card.scrollTop)
-        // console.log(card.scrollHeight)
-        // console.log(card.clientHeight)
+        // console.log(card.clientHeight)//200
+        let maxScroll = card.scrollHeight - card.clientHeight
+        console.log(maxScroll)
+        if (maxScroll - card.scrollTop <= 10) {
+          addItem()
+          // count=count+2
+        }
       })
+      let addItem=()=> {
+        let first = document.createElement('li')
+        first.innerText = `item${count++}`
+        let second = document.createElement('li')
+        second.innerText = `item${count++}`
+        card.append(first)
+      }
     </script>
   </body>
 </html>
