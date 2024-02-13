@@ -1,26 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <section>
-        <ul>
+  </head>
+  <style>
+    .btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: blueviolet;
+      padding: 1rem;
+      display: none;
+    }
+   
+  </style>
+  <body>
+    <!-- we have to create a scroll top button -->
 
-        </ul>
+    <button class="btn " id="btn">scroll top</button>
+
+
+    <section class="main">
+      <ul></ul>
+      <!-- <div id="container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus aliquam nisi omnis dolores sit necessitatibus doloribus magnam deleniti, eveniet debitis aliquid, similique nihil. Beatae, adipisci?</p>
+      </div> -->
     </section>
 
-<script>
-let ul=document.querySelector('ul')
-for(let i=0;i<1000;i++){
-let li=document.createElement('li')
-li.innerText=`satish ${i}`
-ul.append(li)
+    <!-- <form>
+<div>
+    <label for="post">Start a post</label>
+    <textarea name="post" id="post" cols="30" rows="10"></textarea>
+</div> 
 
-}
+    </form> -->
 
-</script>
-</body>
+
+
+    <script>
+
+        
+    //   let ul = document.querySelector('ul')
+    //   for (let i = 0; i < 1000; i++) {
+    //     let li = document.createElement('li');
+    //     li.innerText = `satish ${i}`;
+    //     ul.append(li)
+    //   }
+
+    // //   console.log(window)
+    //   let section = document.querySelector('.main')
+    //   window.addEventListener('scroll', () => {
+
+    //     // console.log(window.pageYOffset)
+    //     if (document.documentElement.scrollTop>= 100) {
+    //       btn.style.display='block'
+    //     } else {
+    //       btn.style.display='none'
+    //     }
+    //   })
+    // //   console.log(window)
+    //   btn.addEventListener('dblclick', () => {
+    //     //    console.log(window.pageYOffset)
+    //     // console.log(document.documentElement)
+    //     document.documentElement.scrollTop = 0;      
+    //   })
+
+// click
+// dblclick
+
+// MouseEvent listener
+// mouse over 
+// mouseup
+// mouse down
+// mouseleave
+
+// container.addEventListener('mouseover',()=>{
+//     console.log('hello')
+// })
+// container.addEventListener('mouseup',()=>{
+//     console.log('hello')
+// })
+
+// container.addEventListener('mouseleave',()=>{
+//     console.log('hello')
+// })
+
+// container.addEventListener('dblclick',()=>{
+//     console.log('hello')
+// })
+
+// KeyboardEvent
+
+// keyup
+// window.addEventListener('keyup',(event)=>{
+//     console.log('keyup')
+
+// })
+
+// window.addEventListener('keydown',()=>{
+//     console.log('keydown')
+// })
+
+// submit
+// input
+console.log(1)
+console.log(2)
+setTimeout(()=>{
+
+  console.log(10)
+},5000)
+setTimeout(()=>{
+
+  console.log(9)
+},2000)
+setTimeout(()=>{
+
+ console.log(8)
+},1000)
+console.log(3)
+console.log(4)
+console.log(5)
+    </script>
+  </body>
 </html>
