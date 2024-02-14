@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .skill-container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+      .skill-card {
+        width: 100%;
+      }
+      .progress {
+        /* width: 100%; */
+        height: 5rem;
+
+        background-color: grey;
+      }
+
+      .progress-child {
+        background-color: green;
+        padding: 1rem;
+        width: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="skill-container"></section>
+
+    <script>
+      let skill = [
+        {
+          title: 'HTML',
+          percent: '70',
+          color: 'red',
+        },
+        {
+          title: 'CSS',
+          percent: '90',
+          color: 'green',
+        },
+        {
+          title: 'JAVASCRIPT',
+          percent: '60',
+          color: 'blue',
+        },
+        {
+          title: 'react',
+          percent: '50',
+          color: 'aqua',
+        },
+        {
+          title: 'python',
+          percent: '30',
+          color: 'yellow',
+        },
+      ]
+      let container = document.querySelector('.skill-container')
+      console.log(container)
+
+      skill.forEach((item) => {
+        let div = document.createElement('div') //<div class=skill-card></div>
+        div.className = 'skill-card'
+        let h2 = document.createElement('h2')
+        //adding text in h2 tag
+        h2.innerText = `${item.title}`
+        //create  progress div with class progress
+        let progress = document.createElement('div')
+        progress.className = 'progress'
+        //creating child div
+        let child = document.createElement('div')
+        child.className = 'progress-child'
+
+        let p = document.createElement('p')
+        p.innerText = `${item.percent}%`
+        child.append(p)
+        progress.append(child)
+        div.append(h2, progress)
+        console.log(div)
+        container.append(div)
+        child.style.width = `${item.percent}%`
+        child.style.backgroundColor = `${item.color}`
+      })
+
+      // let array=skill.map((item)=>{
+
+      // return `  <div class="skill-card">
+      //         <h2>${item.title}</h2>
+      //         <div class="progress">
+      //           <div class="progress-child" style="width:${item.percent}%;background-color:${item.color}">
+      //             <p>${item.percent}%</p>
+      //           </div>
+      //         </div>
+      //       </div>`
+      // })
+      // let container=document.querySelector('.skill-container')
+      // container.innerHTML=array.join('')
+    </script>
+  </body>
+</html>
