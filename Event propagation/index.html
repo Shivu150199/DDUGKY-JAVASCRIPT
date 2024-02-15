@@ -22,16 +22,23 @@
         background: red;
         margin: 0 auto;
       }
+      #main {
+        width:1000px;
+        margin: 0 auto;
+        padding: 3rem;
+        background-color: tomato;
+      }
     </style>
   </head>
 
   <body>
-    <div id="grandParent">
-      <div id="parents">
-        <div id="child"></div>
+    <div id="main">
+      <div id="grandParent" class="a b c">
+        <div id="parents">
+          <div id="child"></div>
+        </div>
       </div>
     </div>
-
     <script src="index.js"></script>
   </body>
 </html>
