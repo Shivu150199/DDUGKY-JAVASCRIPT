@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form element</title>
+  </head>
+  <body>
+    <!-- <form id="form">
+      <div>
+        <label for="post">Post</label>
+        <textarea name="post" id="post" cols="30" rows="10"></textarea>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="email" />
+      </div>
+      <div>
+        <label for="public">Make this post public</label>
+        <input type="checkbox" name="public" id="public" />
+      </div>
+      <button class="btn" id="btn">submit</button>
+    </form> -->
+    <!-- <button id="btn2" type="button">submit</button> -->
+    <textarea name="size" id="size" cols="30" rows="10"></textarea>
+    <script>
+      //   document.querySelector('#form').addEventListener('submit', (e) => {
+      //     e.preventDefault()
+
+      //     let obj = {
+      //       post: post.value,
+      //       email: email.value,
+      //       public: public.checked,
+      //     }
+      //     console.log(obj)
+      //   })
+    //   console.log(size.style)
+      let fontsize = 16
+      size.addEventListener('keyup', (e) => {
+        console.log(e)
+        if (e.key == 'a' && e.altKey) {
+          fontsize++
+          size.style.fontSize = `${fontsize}px`
+        } else if (e.key == 'b' && e.altKey) {
+          
+          if(fontsize<=16){
+            fontsize=16;
+          }else{
+            fontsize--
+          }
+          size.style.fontSize = `${fontsize}px`
+        }
+      })
+    </script>
+  </body>
+</html>
