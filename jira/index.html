@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JIRA</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .root {
+        width: 100%;
+        height: 100vh;
+        background-color: whitesmoke;
+        padding: 2rem;
+        display: flex;
+        gap: 3rem;
+      }
+      #to-do,
+      #progress,
+      #done {
+        width: 15rem;
+        height: 25rem;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        background-color: aliceblue;
+        border-radius: 10px;
+        padding: 10px;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 5px;
+        background-color: bisque;
+        margin-bottom: 1rem;
+      }
+
+      #issue {
+        width: 100%;
+        padding: 1rem 0;
+      }
+      .hide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="root" id="root">
+      <div id="to-do">
+        <button class="btn">create to do</button>
+        <input
+          type="text"
+          id="issue"
+          placeholder="write issue"
+          class="hide issue"
+        />
+      </div>
+      <div id="progress"></div>
+      <div id="done"></div>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
