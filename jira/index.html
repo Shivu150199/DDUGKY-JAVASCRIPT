@@ -18,17 +18,18 @@
         display: flex;
         gap: 3rem;
       }
-      #to-do,
-      #progress,
-      #done {
+      .container {
         width: 15rem;
         height: 25rem;
         box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
         background-color: aliceblue;
         border-radius: 10px;
         padding: 10px;
+        overflow: scroll;
       }
-
+      ::-webkit-scrollbar {
+        display: none;
+      }
       .btn {
         width: 100%;
         padding: 5px;
@@ -43,11 +44,23 @@
       .hide {
         display: none;
       }
+      .child-card {
+        /* text-wrap: wrap;
+        overflow: scroll; */
+        word-break: break-all;
+
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: auto;
+        /* flex-wrap: wrap; */
+        /* text-align: justify; */
+      }
     </style>
   </head>
   <body>
     <section class="root" id="root">
-      <div id="to-do">
+      <div class="container" id="to-do">
         <button class="btn">create to do</button>
         <input
           type="text"
@@ -56,8 +69,8 @@
           class="hide issue"
         />
       </div>
-      <div id="progress"></div>
-      <div id="done"></div>
+      <div class="container" id="progress"></div>
+      <div class="container" id="done"></div>
     </section>
 
     <script src="index.js"></script>
