@@ -1,18 +1,18 @@
 let btn = document.querySelectorAll('.btn')
-console.log(btn)
+// console.log(btn)
 let input = document.querySelectorAll('.issue')
-console.log(input)
+// console.log(input)
 
 btn.forEach((item) => {
-  console.log(item)
+  // console.log(item)
   item.addEventListener('click', (e) => {
-    console.log(e.target)
+    // console.log(e.target)
     let input = e.target.nextElementSibling
     console.log(input)
     input.classList.remove('hide')
     e.target.classList.add('hide')
-    let inputTag=e.target.nextElementSibling 
-    inputTag.focus()
+    // let inputTag=e.target.nextElementSibling 
+    input.focus()
     // input.classList.remove('hide')
     // btn.classList.add('hide')
     // input.focus()
@@ -29,6 +29,7 @@ let draggingInfo = {
   draggingElement: null,
   draggingId: null,
 }
+draggingInfo.draggingElement='<h1>devi</h1>'
 
 input.forEach((item) => {
   item.addEventListener('keyup', (e) => {
@@ -45,10 +46,10 @@ input.forEach((item) => {
       card.setAttribute('data-container', 'card')
       card.style.background = 'skyblue'
       card.draggable = 'true'
-      console.log(card);
+      // console.log(card);
 
  card.addEventListener('dragstart', (e) => {
-   console.log('hello')
+  //  console.log('hello')
    draggingInfo.draggingElement = e.target
    draggingInfo.draggingId = e.target.getAttribute('data-container')
    console.log(draggingInfo.draggingElement, draggingInfo.draggingId)
@@ -96,7 +97,7 @@ input.forEach((item) => {
 // })
 
 let allContainer = document.querySelectorAll('.container')
-console.log(allContainer)
+// console.log(allContainer)
 
 allContainer.forEach((item) => {
   item.addEventListener('dragover', (event) => {
@@ -108,6 +109,7 @@ allContainer.forEach((item) => {
     let card = draggingInfo.draggingElement
     card.id = draggingInfo.draggingId
     let box = e.currentTarget
+    // let box=document.querySelector('#progress')
     console.log(box)
     box.appendChild(card)
   })
