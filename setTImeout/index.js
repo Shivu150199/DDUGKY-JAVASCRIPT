@@ -93,8 +93,4 @@ start.addEventListener('click',()=>{
 
 end.addEventListener('click',()=>{
     clearInterval(timerId)
-  second = 0
-  minute = 0
-  hour = 0
-  
 })
