@@ -1,5 +1,6 @@
 let start = document.querySelector('.start')
 let end = document.querySelector('.end')
+let reset=document.querySelector('.reset')
 // let setTimeId
 // start.addEventListener('click', () => {
 //   setTimeId = setTimeout(() => {
@@ -47,15 +48,17 @@ let end = document.querySelector('.end')
 // },1000)
 
 // clearInterval(id)
-
+let secStick=document.querySelector('.stick')
 let second = 0
 let minute = 0
 let hour = 0
+// let deg=second*6
 // let day=0;
 let timerId;
 start.addEventListener('click',()=>{
    timerId=setInterval(() => {
      second++
+     secStick.style.transform = `rotate(${second*6}deg)`
      if (second >= 60) {
        minute++
        second = 0
@@ -92,5 +95,23 @@ start.addEventListener('click',()=>{
 })
 
 end.addEventListener('click',()=>{
-    clearInterval(timerId)
+
+
+
+  clearInterval(timerId)
 })
+
+
+
+
+reset.addEventListener('click',()=>{
+  second=0;
+  minute=0;
+  hours=0;
+  seconds.innerText=`00`
+  minutes.innerText=`00`
+  hours.innerText=`00`
+
+  clearInterval(timerId)
+})
+
