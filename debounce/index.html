@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" placeholder="search" id="search" />
+    <button id="btn">clickme</button>
+
+    <script>
+      let count = 0
+      search.addEventListener('input', () => {
+        debounce(() => {
+          count++
+          console.log('search value is', search.value)
+          console.log('count', count)
+        }, 5000)
+      })
+
+      // let timerID
+      // let count=0
+      // function debounce(){
+      // clearTimeout(timerID);
+      // console.log('hello')
+      // timerID=setTimeout(()=>{
+      // count++
+      // console.log('count',count)
+      // },2000)
+
+      // }
+
+      let timerID
+      function debounce(callback, delay) {
+        clearTimeout(timerID)
+        timerID = setTimeout(() => {
+          callback()
+        }, delay)
+      }
+    </script>
+  </body>
+</html>
