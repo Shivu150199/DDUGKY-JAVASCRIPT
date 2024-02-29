@@ -10,14 +10,42 @@
     <button id="btn">clickme</button>
 
     <script>
-      let count = 0
-      search.addEventListener('input', () => {
-        debounce(() => {
-          count++
-          console.log('search value is', search.value)
-          console.log('count', count)
-        }, 5000)
-      })
+
+
+
+      // search.addEventListener('input', () => {
+      //   throttling(() => {
+      //     console.log(search.value)
+      //   }, 5000)
+      // })
+
+      // let hasStarted = false
+
+      // function throttling(callback, delay) {
+      //   if (hasStarted) {
+      //     return
+      //   } else {
+      //     hasStarted = true
+      //     setTimeout(() => {
+      //       callback()
+      //       hasStarted = false
+      //     }, delay)
+      //   }
+      // }
+
+
+
+
+
+
+      // let count = 0
+      // search.addEventListener('input', () => {
+      //   debounce(() => {
+      //     count++
+      //     console.log('search value is', search.value)
+      //     console.log('count', count)
+      //   }, 5000)
+      // })
 
       // let timerID
       // let count=0
@@ -31,13 +59,15 @@
 
       // }
 
-      let timerID
-      function debounce(callback, delay) {
-        clearTimeout(timerID)
-        timerID = setTimeout(() => {
-          callback()
-        }, delay)
-      }
+      // let timerID
+      // function debounce(callback, delay) {
+      //   clearTimeout(timerID)
+      //   timerID = setTimeout(() => {
+      //     callback()
+      //   }, delay)
+      // }
+
+      // today we are going to learn about throttling
     </script>
   </body>
 </html>
