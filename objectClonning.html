@@ -49,20 +49,21 @@
       // obj.b.d=100
       // console.log(obj1.b.d)//
 
-    //   let arr = [34, 34, 34, 456, 34]
-    //   Array.prototype.getSum = function () {
-    //     let sum = 0
-    //     for (let i = 0; i < this.length; i++) {
-    //       sum += this[i]
-    //     }
-    //     return sum
-    //   }
-    //   console.log(arr.getSum())
-    //   let arr2=[23,23]
-    //   console.log(arr2.getSum())
+      //  let arr = [34, 34, 34, 456, 34]
+      //  console.log(arr)
+      //   Array.prototype.getSum = function () {
+      //     let sum = 0
+      //     for (let i = 0; i < this.length; i++) {
+      //       sum += this[i]
+      //     }
+      //     return sum
+      //   }
+      //   console.log(arr.getSum())
+      //   let arr2=[23,23]
+      //   console.log(arr2.getSum())
 
       //   let arr1 = new Array(23, 23, 54, 75, 34)
-      //       console.log(arr.__proto__)
+      // console.log(arr.__proto__)
       //       console.log(arr1.__proto__)
       // let arr3=[23,42]
       // console.log(arr3)
@@ -89,26 +90,124 @@
 
       //   console.log(arr.map)
 
-// let name='jeet'
-// console.log(name.__proto__)
-// console.log(String.prototype)
+      // let name='jeet'
+      // console.log(name.__proto__)
+      // console.log(String.prototype)
 
+      // console.log(Number.prototype)
 
-// console.log(Number.prototype)
+      // let obj={
+      //     // name:'devi',
+      // email:'devi@example.com',
+      // }
 
-let obj={
-    // name:'devi',
-email:'devi@example.com',
+      // console.log(Object.prototype)
+      // Object.prototype.getFullName = function(){
+      //     return `${this.name} ${this.email}`
+      // }
+      // console.log(obj.getFullName())
+
+      // let animal = {
+      //   eat: true,
+      // }
+
+      // let monkey = {
+      //   jump: true,
+      //   __proto__: animal,
+      // }
+
+      // console.log(monkey.eat)
+
+      // let grandParent = {
+      //   house: 'Devilal Bhavan',
+      //   land: '100acre',
+      // }
+
+      // let parent = {
+      //   car: 'BMW',
+      //   __proto__: grandParent,
+      //   // __proto__:devilal,
+      // }
+
+      // let devilal = {
+      //   gameSet: 'ps5',
+      //   __proto__: parent,
+      // }
+
+      // console.log(devilal.house)
+      // console.log(devilal.car)
+      // console.log(devilal.gameSet)
+
+      // console.log(parent)
+      // console.log(parent.house)
+      // console.log(parent.car)
+      // console.log(parent.gameSet)
+
+      // let functionObj={
+      // getSum:function(){
+      //   return this.a+this.b;
+      // },
+      // getMul:function(){
+      //   return this.a*this.b
+      // }
+
+      // }
+
+      // let num={
+      //   a:55,
+      //   b:40,
+      // __proto__:functionObj,
+      // }
+
+      // let num2={
+      //   //  a:25,
+      //   b:5,
+      //   __proto__:num
+      // }
+      // console.log(num)
+      // let result=num.getSum()
+      // console.log(num.getMul())
+      // let result2=num2.getSum()
+      // console.log(result)
+      // console.log(result2)
+
+      // console.log(num2.getSum())
+
+      // let functionObj = {
+      //   getName: function () {
+      //     return `hello my name is ${this.name}`
+      //   },
+      //   getEmail: function () {
+      //     return `my email is ${this.email}`
+      //   },
+      //   getDetail: function () {
+      //     return `my name is ${this.name}) and my email is ${this.email}`
+      //   },
+      // }
+
+      // let yogesh = {
+      //   name: 'Yogesh Pahade',
+      //   email: 'yogesh@gamil.com',
+      //   __proto__: functionObj,
+      // }
+
+      // console.log(yogesh.getName(), yogesh.getEmail(), yogesh.getDetail())
+
+      let arr = [3, 4, 6]
+      console.log(arr)
+      Array.prototype.reduce = null
+
+Array.prototype.reduce=function(){
+  let sum = 0
+  for (let i = 0; i < this.length; i++) {
+    sum += this[i]
+  }
+  return sum
+
 }
-
-console.log(Object.prototype)
-Object.prototype.getFullName = function(){
-    return `${this.name} ${this.email}`
-}
-console.log(obj.getFullName())
-
-
-
+let x=arr.reduce()
+console.log(x)
+     
     </script>
   </body>
 </html>

@@ -169,7 +169,83 @@
 
       // IIFE
 
-      (function () {console.log('hello')})();(function () {let a=10;let b=20;console.log(a+b)})()
+      // (function () {console.log('hello')})();(function () {let a=10;let b=20;console.log(a+b)})()
+
+      // let a = 100
+
+      // function callMe() {
+      //   let a = 200
+      //   let f = function () {
+      //     console.log(a)
+      //   }
+      //   return a
+      // }
+      // let a = 100
+      // let x = callMe()
+      // console.log(x)
+      // x()
+
+      // let name = function () {
+      //   console.log('dharmendra')
+      // }
+      // name()
+      // let x = function () {
+      //   console.log('5')
+      // }
+
+      // let sum=function(a,b){
+      //   return a+b
+      // }
+
+      // let result=sum(10,20)
+      // console.log(result)
+
+      // function sum(a,b){
+      //   return a+b
+      // }
+      // let x=sum(10,20)
+      // console.log(x)
+      // let sum=function(a){
+      //   return a
+      // }
+      // let sum=a=>a
+      // let x=sum(10)
+      // console.log(x)
+
+      // let age =21
+
+      // let eligible=function(age){
+      // if(age<=18){
+      //   return false;
+      // }else{
+      //   return true;
+      // }
+
+      // }
+      // console.log(eligible(21))
+
+      // let eligible=age=>age<=18?false:true
+
+      // console.log(eligible(21))
+// console.log(window)
+//       console.log(window.localStorage.ipAddress)
+
+let obj={
+  f:'devi',
+  l:'lal',
+  name:function (){
+ console.log(`my name is ${this.f} ${this.l}`)
+}
+}
+
+obj.name()
+
+
+// function name (fName,lName){
+//  console.log(`my name is ${fName} ${lName}`)
+// }
+
+// name('devi','lal')
     </script>
   </body>
 </html>
