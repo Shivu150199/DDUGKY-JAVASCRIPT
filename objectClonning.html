@@ -193,21 +193,102 @@
 
       // console.log(yogesh.getName(), yogesh.getEmail(), yogesh.getDetail())
 
-      let arr = [3, 4, 6]
-      console.log(arr)
-      Array.prototype.reduce = null
+      //       let arr = [3, 4, 6]
+      //       console.log(arr)
+      //       Array.prototype.reduce = null
 
-Array.prototype.reduce=function(){
-  let sum = 0
-  for (let i = 0; i < this.length; i++) {
-    sum += this[i]
-  }
-  return sum
+      // Array.prototype.reduce=function(){
+      //   let sum = 0
+      //   for (let i = 0; i < this.length; i++) {
+      //     sum += this[i]
+      //   }
+      //   return sum
 
-}
-let x=arr.reduce()
-console.log(x)
-     
+      // }
+      // let x=arr.reduce()
+      // console.log(x)
+
+      // call apply and bind
+
+      //call
+      // let functionObj = {
+      //   getDetail: function (learn, pet, book) {
+      //     return `i am learning ${learn} and i love my ${pet} and also reading the ${book}`
+      //   },
+      //   getSection: function (section) {
+      //     console.log(`my section is ${section}`)
+      //   },
+      // }
+
+      // let obj = {
+      //   section: 'bia4',
+      //   name: 'devi',
+      //   center: 'DDUGKY',
+      //   role: 'devloper',
+      //   getCenter: function () {
+      //     console.log(`I am living in the center of ${this.center}`)
+      //   },
+      // }
+      // let obj2 = {
+      //   section: 'bia3',
+      //   center: 'DDUGKY',
+      //   role: 'devloper',
+      // }
+
+      // let x = obj.getCenter.bind(obj2)
+      // x()
+      // // console.log(x)
+      // // console.log(x)
+      // // functionObj.getSection.apply(obj2,['bia4'])
+      // let x=functionObj.getDetail.call(obj)
+      // console.log(x)
+      // obj.getSection.call(obj2)
+      // let x=functionObj.getDetail.call(obj2,'Javascript','Lion','Bhagwat Geeta')
+      // let x=functionObj.getDetail.apply(obj2,['Javascript','Lion','Bhagwat Geeta'])
+      // console.log(x)
+
+      // const module = {
+      //   x: 42,
+      //   getX: function () {
+      //     return this.x
+      //   },
+      // }
+      // let x = module.getX
+      // let y=x.bind(module)
+      // // x=function(){
+      // //   return this.x
+      // // }
+      // console.log(y())
+      // const unboundGetX = module.getX;
+      // console.log(unboundGetX()); // The function gets invoked at the global scope
+      // // Expected output: undefined
+
+      // const boundGetX = unboundGetX.bind(module);
+      // console.log(boundGetX());
+      // // Expected output: 42
+
+      //       function Animal(name, leg, eat) {
+      //         this.name = name
+      //         this.leg = leg
+      //         this.eat = eat
+      //       }
+
+      // let monkey=new Animal('satish',4,'Gram')
+      // console.log(monkey)
+
+      let obj = new Object()
+      console.log(obj)
+
+      class Animal {
+        constructor(name, leg, eat) {
+          name
+          leg
+          eat
+        }
+      }
+
+      let monkey = new Animal('satish', '4', 'Gram')
+      console.log(monkey)
     </script>
   </body>
 </html>
