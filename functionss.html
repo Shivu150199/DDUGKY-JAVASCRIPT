@@ -227,25 +227,225 @@
       // let eligible=age=>age<=18?false:true
 
       // console.log(eligible(21))
-// console.log(window)
-//       console.log(window.localStorage.ipAddress)
+      // console.log(window)
+      //       console.log(window.localStorage.ipAddress)
 
-let obj={
-  f:'devi',
-  l:'lal',
-  name:function (){
- console.log(`my name is ${this.f} ${this.l}`)
-}
-}
+      // let obj={
+      //   f:'devi',
+      //   l:'lal',
+      //   name:function (){
+      //  console.log(`my name is ${this.f} ${this.l}`)
+      // }
+      // }
 
-obj.name()
+      // obj.name()
 
+      // function name (fName,lName){
+      //  console.log(`my name is ${fName} ${lName}`)
+      // }
 
-// function name (fName,lName){
-//  console.log(`my name is ${fName} ${lName}`)
-// }
+      // name('devi','lal')
 
-// name('devi','lal')
+      // class Professor {
+      //   constructor(name, teach) {
+      //     this.name = name
+      //     this.teach = teach
+      //   }
+      //   introduce() {
+      //     console.log(`Hi i am ${this.name}`)
+      //   }
+      // }
+
+      // class Student extends Professor {
+      //   constructor(name, section, teach) {
+      //     super(name, teach)
+
+      //     this.section = section
+      //   }
+      //   play(game) {
+      //     super.introduce()
+      //     console.log(`i love to play ${game}`)
+      //   }
+      // }
+
+      // let sachin = new Student('sachin', 'BIA3', 'c++')
+      // // console.log(sachin.name)
+      // // console.log(sachin.introduce())
+      // // console.log(sachin.teach)
+      // sachin.play('chess') // let devi = new Professor('Devi sir', 'OOPS')
+      // console.log(devi.name)
+      // devi.introduce()
+      // let yogesh = new Professor('Yogi sir', 'Python')
+      // yogesh.introduce()
+      // console.log(yogesh.teach)
+
+      //how to use Static keyword
+
+      // class MathFunc {
+      //   // constructor(){}
+      //   add(a, b) {
+      //     console.log(a + b)
+      //   }
+      //   static subtract(a, b) {
+      //     console.log(a - b)
+      //   }
+      // }
+
+      // MathFunc.add(20,30)
+      // MathFunc.subtract(20, 30)
+
+      // let math = new MathFunc()
+      // math.add(34, 43)
+
+      // class Value extends MathFunc {
+      //   constructor(a, b) {
+      //     super()
+      //     this.a = a
+      //     this.b = b
+      //   }
+      //   add(){
+      //     super.add(this.a, this.b)
+      //   }
+      // }
+      // let newValue = new Value(10, 20)
+      //  newValue.add()
+      // let math = new MathFunc()
+      // math.add(10, 20)
+
+      // OOPs=object oriented programming
+      // Array
+      // String
+      // Object
+      //       let arr1 = [34, 34]
+      //       console.log(arr1)
+      //       let arr2 = new Array(10, 20, 30)
+      //       console.log(arr2)
+      //       let obj={}
+      //       console.log(obj)
+      // let obj2=new Object()
+      // console.log(obj2)
+
+      //OOPs=>
+      //abstraction=>
+      //encapsulation=>
+      // inheritance=>code reusable,clean code -accessing the properties and methods of the super class for the sub class
+      //polymorphism=>
+
+      //   class BankAccount {
+      //     constructor(name, acc, balance) {
+      //       this.name = name
+      //       this.acc = acc
+      //       this.balance = balance
+      //     }
+
+      //     showDetails() {
+      //       return `Account holder - ${name}
+      // Account number - ${acc}
+      // and total balance is ${balance}`
+      //     }
+
+      //     deposit(amount) {
+      //       this.balance += amount
+      //     }
+      //     withdraw(amount) {
+      //       this.balance -= amount
+      //     }
+      //   }
+
+      // let sachinBankDetails = new BankAccount('sachin', 23475902384, 100000)
+      // console.log(sachinBankDetails.balance)
+      // sachinBankDetails.deposit(1000)
+      // console.log(sachinBankDetails.balance)
+
+      // sachinBankDetails.withdraw(10000)
+
+      // console.log(sachinBankDetails.balance)
+
+      // class firstClass {
+      // 	add() {
+      // 		console.log("First Method")
+      // 	}
+
+      // }
+      // class secondClass extends firstClass {
+      // add(){
+      //   console.log('second method')
+      // }
+      // }
+      // class thirdClass extends secondClass {
+      // add() {
+      // 		console.log("third Method")
+      // 	}
+      // }
+      // let ob = new firstClass();
+      // let ob2 = new secondClass();
+      // let ob3 = new thirdClass();
+      // console.log(ob3)
+      // ob.add();
+      // ob2.add();
+      // ob3.add();
+
+      //       class Account {
+      //         #balance
+      //         constructor(owner, balance) {
+      //           this.owner = owner
+      //           this.#balance = balance // #balance is a private property
+      //         }
+
+      //         // Getter for balance
+      //         showBalance() {
+      //           //Only for owner
+      //           return this.#balance
+      //         }
+
+      //         // Setter for balance
+      //         showNewBalance(newBalance) {
+      //           if (newBalance < 0) {
+      //             console.log('Invalid balance!')
+      //           } else {
+      //             this.#balance = newBalance
+      //           }
+      //         }
+
+      //         deposit(amount) {
+      //           this.#balance += amount
+      //           console.log(`Deposited ${amount}. New balance is ${this.#balance}.`)
+      //         }
+      //       }
+      // // let bal1=Account.showBalance()
+      //       let account = new Account('John Doe', 1000)
+      //       let bal = account.showBalance()
+      //       console.log(bal)
+      // 1000
+      // account.deposit(500); // Deposited 500. New balance is 1500.
+      // account.balance = 2000;
+
+      class Something {
+        #property
+
+        constructor() {
+          this.#property = 'test'
+        }
+
+        #privateMethod() {
+          return 'hello world'
+        }
+
+        // getPrivateMessage() {
+        //    return this.#property
+        // }
+        // getPrivateMethod(){
+        //   return this.#privateMethod()
+        // }
+      }
+      let a = new Something()
+      console.log(a.getPrivateMessage())
+      console.log(a.getPrivateMethod())
+      // const instance = new Something()
+      // console.log(instance.property) //=> undefined
+      // console.log(instance.privateMethod) //=> undefined
+      // console.log(instance.getPrivateMessage()) //=> test
+      // console.log(instance.#property); //=> Syntax error
     </script>
   </body>
 </html>
