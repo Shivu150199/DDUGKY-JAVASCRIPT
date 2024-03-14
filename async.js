@@ -161,27 +161,102 @@
 
 // })
 
-const promise = new Promise((res, rej) => {
+// const promise = new Promise((res, rej) => {
 // setTimeout(() => {
 //   res('i am resolved now you can use my data')
 // },500)
 
-  setTimeout(() => {
-    rej('you are not authorised')
-    // console.log('done')
-  }, 2000)
+//   setTimeout(() => {
+//     rej('you are not authorised')
+//     // console.log('done')
+//   }, 2000)
 
-})
-// pending: initial state, neither fulfilled nor rejected.
-// fulfilled: meaning that the operation was completed successfully.
-// rejected: meaning that the operation failed.
-promise
-  .then((item) => {
-    console.log(item)
+// })
+// // pending: initial state, neither fulfilled nor rejected.
+// // fulfilled: meaning that the operation was completed successfully.
+// // rejected: meaning that the operation failed.
+// promise
+//   .then((item) => {
+//     console.log(item)
+//   })
+//   .finally(() => {
+//     console.log('finally')
+//   })
+//   .catch((err) => {
+//     console.log(err)
+//   })
+
+// function a() {
+//   return 'b'
+// }
+
+// let c = a()
+// console.log(typeof c)
+
+// function step1() {
+//   return new Promise((res, rej) => {
+//     rej('i am resolved')
+//   })
+// }
+
+// step1().then((item) => console.log(item)).catch((error)=>console.log(error))
+
+function step1() {
+  return new Promise((res, rej) => {
+    // console.log('started boiling water')
+    setTimeout(() => {
+      let data = { step1: 'boiling water' }
+      res(data)
+    }, 2000)
   })
-  .finally(() => {
-    console.log('finally')
+}
+
+function step2(data) {
+  return new Promise((res, rej) => {
+    // console.log('finished boiling water')
+    setTimeout(() => {
+      data = { ...data, step2: 'finished boiling water' }
+      res(data)
+    }, 2000)
   })
-  .catch((err) => {
-    console.log(err)
+}
+
+function step3(data) {
+  return new Promise((res, rej) => {
+    // console.log('maggie masala and maggie')
+    setTimeout(() => {
+      data = { ...data, step3: 'maggie masala and maggie' }
+      res(data)
+    }, 2000)
   })
+}
+
+function step4(data) {
+  return new Promise((res, rej) => {
+    // console.log('maggie finished')
+    setTimeout(() => {
+      data = { ...data, step4: 'maggie finished,enjoy' }
+      res(data)
+    }, 2000)
+  })
+}
+
+// let obj={a:1}
+// obj={...obj,b:2}
+// console.log(obj)
+
+// let result = step1()
+//   .then((data) => step2(data))
+//   .then((data1) => step3(data1))
+//   .then((data2) => step4(data2))
+//   .then((data3) => data3)
+//   .catch((err) => console.log(err))
+
+// result.then((data)=>console.log(data))
+
+fetch('https://dummyjson.com/products')
+  .then((response) => response.json())
+  .then((data) => console.log(data))
+  .catch((err) => console.log(err))
+
+// console.log(fetchData())
