@@ -201,45 +201,45 @@
 
 // step1().then((item) => console.log(item)).catch((error)=>console.log(error))
 
-function step1() {
-  return new Promise((res, rej) => {
-    // console.log('started boiling water')
-    setTimeout(() => {
-      let data = { step1: 'boiling water' }
-      res(data)
-    }, 2000)
-  })
-}
+// function step1() {
+//   return new Promise((res, rej) => {
+//     // console.log('started boiling water')
+//     setTimeout(() => {
+//       let data = { step1: 'boiling water' }
+//       res(data)
+//     }, 2000)
+//   })
+// }
 
-function step2(data) {
-  return new Promise((res, rej) => {
-    // console.log('finished boiling water')
-    setTimeout(() => {
-      data = { ...data, step2: 'finished boiling water' }
-      res(data)
-    }, 2000)
-  })
-}
+// function step2(data) {
+//   return new Promise((res, rej) => {
+//     // console.log('finished boiling water')
+//     setTimeout(() => {
+//       data = { ...data, step2: 'finished boiling water' }
+//       res(data)
+//     }, 2000)
+//   })
+// }
 
-function step3(data) {
-  return new Promise((res, rej) => {
-    // console.log('maggie masala and maggie')
-    setTimeout(() => {
-      data = { ...data, step3: 'maggie masala and maggie' }
-      res(data)
-    }, 2000)
-  })
-}
+// function step3(data) {
+//   return new Promise((res, rej) => {
+//     // console.log('maggie masala and maggie')
+//     setTimeout(() => {
+//       data = { ...data, step3: 'maggie masala and maggie' }
+//       res(data)
+//     }, 2000)
+//   })
+// }
 
-function step4(data) {
-  return new Promise((res, rej) => {
-    // console.log('maggie finished')
-    setTimeout(() => {
-      data = { ...data, step4: 'maggie finished,enjoy' }
-      res(data)
-    }, 2000)
-  })
-}
+// function step4(data) {
+//   return new Promise((res, rej) => {
+//     // console.log('maggie finished')
+//     setTimeout(() => {
+//       data = { ...data, step4: 'maggie finished,enjoy' }
+//       res(data)
+//     }, 2000)
+//   })
+// }
 
 // let obj={a:1}
 // obj={...obj,b:2}
@@ -254,9 +254,87 @@ function step4(data) {
 
 // result.then((data)=>console.log(data))
 
-fetch('https://dummyjson.com/products')
-  .then((response) => response.json())
-  .then((data) => console.log(data))
-  .catch((err) => console.log(err))
+// fetch('https://dummyjson.com/products')
+//   .then((response) => response.json())
+//   .then((data) => {
+//     let product = data.products
+//     console.log(product)
+//     render(product)
+// //     let result = product.map((item) => {
+// //       return `<div class="card">
+// // <img src=${item.images[0]} alt="">
+// // <div class="info">
+// // <h2 class="title">${item.title}</h2>
+// // <p>Price : ${item.price}</p>
+// // </div>
 
-// console.log(fetchData())
+// // </div>
+// // `
+// //     })
+
+// //     main.innerHTML = result.join('')
+//   }).catch((err)=>{
+//     console.log(err)
+//   })
+
+// function errorHandler(status,message){
+//   let error=new Error(message)
+//   error.status=status
+//   throw error
+// }
+
+// let x=errorHandler(200,'successfull')
+// console.log(x.status,x.message)
+
+// function render(arrayOfObjects) {
+//   let result = arrayOfObjects.map((item) => {
+//     return `<div class="card">
+// <img src=${item.images[0]} alt="">
+// <div class="info">
+// <h2 class="title">${item.title}</h2>
+// <p>Price : ${item.price}</p>
+// </div>
+
+// </div>
+// `
+//   })
+
+//   main.innerHTML = result.join('')
+// }
+
+// function fetchData() {
+  fetch('https://dummyjson.com/products')
+//     .then((response) => response.json())
+//     .then((data) => {
+//       let product = data.products
+//       console.log(product)
+//       render(product)
+//     })
+//     .catch((err) => {
+//       console.log(err)
+//     })
+// }
+
+// window.addEventListener('DOMContentLoaded',fetchData)
+// let url
+
+let url = `https://en.wikipedia.org/w/api.php?action=query&list=search&srlimit=20&format=json&origin=*&srsearch=`
+// let search = 'cat'
+
+input.addEventListener('keyup', (e) => {
+  let searchValue = input.value
+  if (e.key == 'Enter') {
+    fetchData(url, searchValue)
+  }
+})
+
+
+function fetchData(url, searchValue) {
+  fetch(`${url}${searchValue}`)
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data.query.search)
+    }).catch((err)=>console.log(err.message))
+}
+
+fetchData(url,'ganesh')

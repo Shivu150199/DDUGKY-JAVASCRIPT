@@ -4,8 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+      *{
+        margin: 0;padding: 0;
+        box-sizing: border-box;
+      }
+.main{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:2rem;
+}
+.card{
+padding: 1rem;
+border-radius:.5rem;
+background-color: gray;
+box-shadow: 1px 0px 4px rgba(0, 0, 0,0.3);
+}
+.card>img{
+  width:100%;
+}
+
+    </style>
 </head>
 <body>
+<section class="main" id="main">
+<input type="text" id="input">
+
+</section>
+
+
+
+  <!-- https://en.wikipedia.org/w/api.php?action=query&list=search&srlimit=20&format=json&origin=*&srsearch=searchValue -->
   <script src="async.js"></script>  
 </body>
 </html>
