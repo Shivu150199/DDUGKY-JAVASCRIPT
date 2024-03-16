@@ -303,7 +303,7 @@
 // }
 
 // function fetchData() {
-  fetch('https://dummyjson.com/products')
+// fetch('https://dummyjson.com/products')
 //     .then((response) => response.json())
 //     .then((data) => {
 //       let product = data.products
@@ -318,23 +318,61 @@
 // window.addEventListener('DOMContentLoaded',fetchData)
 // let url
 
-let url = `https://en.wikipedia.org/w/api.php?action=query&list=search&srlimit=20&format=json&origin=*&srsearch=`
-// let search = 'cat'
+// let url = `https://en.wikipedia.org/w/api.php?action=query&list=search&srlimit=20&format=json&origin=*&srsearch=`
+// // let search = 'cat'
 
-input.addEventListener('keyup', (e) => {
-  let searchValue = input.value
-  if (e.key == 'Enter') {
-    fetchData(url, searchValue)
+// input.addEventListener('keyup', (e) => {
+//   let searchValue = input.value
+//   if (e.key == 'Enter') {
+//     fetchData(url, searchValue)
+//   }
+// })
+
+// function fetchData(url, searchValue) {
+//   fetch(`${url}${searchValue}`)
+//     .then((res) => res.json())
+//     .then((data) => {
+//       console.log(data.query.search)
+//     }).catch((err)=>console.log(err.message))
+// }
+
+// fetchData(url,'ganesh')
+let result;
+let url = 'https://jsonip.com'
+async function fetchData(url) {
+  try {
+    let response = await fetch(url)
+    console.log(response)
+    let data = await response.json()
+    console.log(data.ip)
+    
   }
-})
+   catch {
+    (err) => {
+      console.log(err)
+    }
+  }
 
+  // let data=await response.json()
+  // console.log(data.ip)
 
-function fetchData(url, searchValue) {
-  fetch(`${url}${searchValue}`)
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data.query.search)
-    }).catch((err)=>console.log(err.message))
+  // fetch(url)
+  //   .then((resp) => resp.json())
+  //   .then((data) => {
+  //     console.log(data.ip)
+  //     document.body.innerHTML = data.ip
+  //   })
+  //   .catch((err) => {
+  //     // console.log(err)
+  //     let error = new Error()
+  //     console.log(error)
+  //     error.message = 'not valid url'
+  //     console.log(error.message)
+  //     document.body.innerHTML=error.message
+  //   })
 }
 
-fetchData(url,'ganesh')
+fetchData(url)
+
+
+console.log(result)
