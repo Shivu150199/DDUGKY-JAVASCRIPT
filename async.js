@@ -337,42 +337,110 @@
 // }
 
 // fetchData(url,'ganesh')
-let result;
-let url = 'https://jsonip.com'
-async function fetchData(url) {
-  try {
-    let response = await fetch(url)
-    console.log(response)
-    let data = await response.json()
-    console.log(data.ip)
-    
-  }
-   catch {
-    (err) => {
-      console.log(err)
-    }
-  }
+// let result;
+// let url = 'https://jsonip.com'
+// async function fetchData(url) {
+//   try {
+//     let response = await fetch(url)
+//     console.log(response)
+//     let data = await response.json()
+//     console.log(data.ip)
 
-  // let data=await response.json()
-  // console.log(data.ip)
+//   }
+//    catch {
+//     (err) => {
+//       console.log(err)
+//     }
+//   }
 
-  // fetch(url)
-  //   .then((resp) => resp.json())
-  //   .then((data) => {
-  //     console.log(data.ip)
-  //     document.body.innerHTML = data.ip
-  //   })
-  //   .catch((err) => {
-  //     // console.log(err)
-  //     let error = new Error()
-  //     console.log(error)
-  //     error.message = 'not valid url'
-  //     console.log(error.message)
-  //     document.body.innerHTML=error.message
-  //   })
+//   // let data=await response.json()
+//   // console.log(data.ip)
+
+//   // fetch(url)
+//   //   .then((resp) => resp.json())
+//   //   .then((data) => {
+//   //     console.log(data.ip)
+//   //     document.body.innerHTML = data.ip
+//   //   })
+//   //   .catch((err) => {
+//   //     // console.log(err)
+//   //     let error = new Error()
+//   //     console.log(error)
+//   //     error.message = 'not valid url'
+//   //     console.log(error.message)
+//   //     document.body.innerHTML=error.message
+//   //   })
+// }
+
+// fetchData(url)
+
+// console.log(result)
+
+// function fetch(url){
+
+// return new Promise((res,rej)=>{
+//   let error=new Error()
+//   error.message='you are not allowed to'
+// res(error)
+// })
+
+// }
+
+// function fetchData() {
+//   fetch('https://jsonip.com')
+//     .then((a) => a.json())
+//     .then((b) => {
+//       console.log(b.ip)
+//       let ip = document.querySelector('.ip')
+//       ip.innerHTML = b.ip
+//     }).catch((e)=>{
+//       console.log(e.message)
+//     })
+// }
+
+// fetchData()
+// let url = `https://ipapi.co/${ip}/json/`
+
+async function fetchData() {
+  let a = await fetch('https://jsonip.com')
+  console.log(a)
+  let b = await a.json()
+  console.log(b)
+  return b.ip
 }
 
-fetchData(url)
+async function fetchDetails() {
+  let ip = await fetchData()
 
+  console.log(ip)
+  let url = `https://ipapi.co/${ip}/json/`
+let response=await fetch(url)
+let data=await response.json()
+console.log(data)
+let lat=data.latitude
+let lon=data.longitude
+document.querySelector(
+  'iframe'
+).src = `https://maps.google.com/maps?q=${lat}, ${lon}&z=15&output=embed`
 
-console.log(result)
+}
+fetchDetails()
+// fetchData()
+
+// async function fetchData() {
+//   let randomJokeurl = 'https://official-joke-api.appspot.com/random_joke'
+//   let response = await fetch(randomJokeurl)
+//   let data = await response.json()
+//   console.log(data)
+//   let joke = data.setup
+//   console.log(joke)
+//   let punch = data.punchline
+//   console.log(punch)
+// document.querySelector('.joke').innerText=joke
+// document.querySelector('.punch').innerText=punch
+
+// }
+
+// // fetchData()
+
+// btn.addEventListener('click',fetchData)
