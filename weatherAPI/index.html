@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Api</title>
+  </head>
+  <body>
+    <section>
+      <form>
+        <div class="input-container">
+          <label>City</label>
+          <input
+            type="text"
+            name="city"
+            id="city"
+            placeholder="write your city name"
+          />
+        </div>
+        <button id="btn">Submit</button>
+      </form>
+      <div class="card-container"></div>
+    </section>
+
+    <script>
+      btn.addEventListener('click', (e) => {
+        e.preventDefault()
+        let value = city.value
+        console.log(value)
+        let urls = `https://api.openweathermap.org/data/2.5/weather?q=${value}&appid=ea48e8e8d002da56774c1298f773db7e`
+        fetchData(urls)
+      })
+
+      async function fetchData(url) {
+        try {
+          
+          let response = await fetch(url)
+          console.log(response)
+          if (!response.ok) {
+            document.querySelector(
+              '.card-container'
+            ).innerHTML = `<h1>Data not found</h1>`
+          }
+       let data = await response.json() 
+        } catch {(err) => {
+            console.log(err)
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -444,3 +444,8 @@ fetchDetails()
 // // fetchData()
 
 // btn.addEventListener('click',fetchData)
+
+
+
+
+
