@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .navbar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        background: tomato;
+      }
+
+      .navcenter {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      #input {
+        border-radius: 0.5rem;
+        /* background: transparent; */
+        padding: 1rem;
+
+        border: transparent;
+      }
+
+      .btn {
+        border: transparent;
+        padding: 0.8rem;
+        border-radius: 0.5rem;
+        background: slategray;
+        color: white;
+        cursor: pointer;
+      }
+
+      .card-container {
+        width: 100%;
+        height: 90vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 2rem;
+      }
+
+      .card {
+        width: 20rem;
+        padding: 1rem;
+        background-color: tomato;
+        border-radius: 0.8rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      img {
+        border-radius: 0.8rem;
+        width:100%;
+      }
+
+      a{
+        padding:1rem;
+        background-color: black;
+        color:white;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navcenter">
+        <input type="text" placeholder="search" id="input" />
+        <button class="btn">search user</button>
+      </div>
+    </nav>
+    <section class="card-container">
+      
+    </section>
+
+    <script>
+      document.querySelector('.btn').addEventListener('click', () => {
+        let value = input.value
+        let gitApi = `https://api.github.com/users/${value}`
+        console.log(value)
+        fetchData(gitApi)
+      })
+
+      async function fetchData(url) {
+document.querySelector('.card-container').innerHTML=`<h1 class='loading'>loading......</h1>`
+
+        let response = await fetch(url)
+
+        let data = await response.json()
+
+document.querySelector('.card-container').innerHTML=`<div class="card">
+        <img
+          src=${data.avatar_url}
+          alt=""
+        />
+        <p>${data.bio}</p>
+        <a href=${data.html_url}>Github Profile</a>
+      </div>`
+        console.log(data)
+      }
+    </script>
+  </body>
+</html>

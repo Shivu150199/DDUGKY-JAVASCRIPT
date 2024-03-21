@@ -23,17 +23,20 @@
     </section>
 
     <script>
+      let apiKey = 'ea48e8e8d002da56774c1298f773db7e'
       btn.addEventListener('click', (e) => {
         e.preventDefault()
         let value = city.value
         console.log(value)
-        let urls = `https://api.openweathermap.org/data/2.5/weather?q=${value}&appid=ea48e8e8d002da56774c1298f773db7e`
+        let urls = `https://api.openweathermap.org/data/2.5/weather?q=${value}&appid=${apiKey}`
         fetchData(urls)
       })
 
       async function fetchData(url) {
         try {
-          
+          document.querySelector(
+            '.card-container'
+          ).innerHTML = `<h1>loading...........</h1>`
           let response = await fetch(url)
           console.log(response)
           if (!response.ok) {
@@ -41,8 +44,13 @@
               '.card-container'
             ).innerHTML = `<h1>Data not found</h1>`
           }
-       let data = await response.json() 
-        } catch {(err) => {
+          let data = await response.json()
+          console.log(data)
+          document.querySelector(
+            '.card-container'
+          ).innerHTML = `<h1>${data.coord.lon}</h1>`
+        } catch {
+          ;(err) => {
             console.log(err)
           }
         }
