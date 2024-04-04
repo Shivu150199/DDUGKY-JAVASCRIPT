@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="email" id="input" />
+    <button id="submit">login</button>
+    <button id="logout">logout</button>
+    <p id="status"></p>
+    <script>
+    //   let isLoggedIn = localStorage.getItem('user')
+    //   console.log(isLoggedIn)
+
+    //   if (isLoggedIn) {
+    //     document.querySelector(
+    //       '#status'
+    //     ).innerHTML = `user is logged in ${isLoggedIn}`
+    //   } else {
+    //     document.querySelector('#status').innerHTML = `user is not logged in`
+    //   }
+
+    //   submit.addEventListener('click', () => {
+    //     let value = input.value
+    //     console.log(value)
+    //     localStorage.setItem('user', value)
+    //     window.location.reload()
+    //   })
+
+    //   setTimeout(()=>{
+    //     localStorage.removeItem('user')
+    //     window.location.reload()
+    //   },5000)
+
+// logout.addEventListener('click',()=>{
+//     localStorage.removeItem('user')
+//     window.location.reload()
+// })
+
+
+// let obj={
+//     name: 'rahul',
+//     age: 25
+// }
+
+
+
+// localStorage.setItem('obj',JSON.stringify(obj))
+// let objResult=localStorage.getItem('obj')
+// console.log(JSON.parse(objResult))
+
+
+ let isLoggedIn = sessionStorage.getItem('user')
+      console.log(isLoggedIn)
+
+      if (isLoggedIn) {
+        document.querySelector(
+          '#status'
+        ).innerHTML = `user is logged in ${isLoggedIn}`
+      } else {
+        document.querySelector('#status').innerHTML = `user is not logged in`
+      }
+
+      submit.addEventListener('click', () => {
+        let value = input.value
+        console.log(value)
+        sessionStorage.setItem('user', value)
+        window.location.reload()
+      })
+logout.addEventListener('click',()=>{
+    sessionStorage.removeItem('user')
+    window.location.reload()
+})
+      
+
+
+
+
+    </script>
+  </body>
+</html>

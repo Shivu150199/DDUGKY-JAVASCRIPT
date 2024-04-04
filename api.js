@@ -4,13 +4,13 @@
 
 
 
-//   fetch('https://dummyjson.com/products/add',{
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json'
-//     },
-//     body: JSON.stringify()
-//   })
+  fetch('https://dummyjson.com/products/add',{
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify()
+  })
 
 
 //   {

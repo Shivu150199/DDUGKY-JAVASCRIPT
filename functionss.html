@@ -420,16 +420,16 @@
       // account.deposit(500); // Deposited 500. New balance is 1500.
       // account.balance = 2000;
 
-      class Something {
-        #property
+      // class Something {
+      //   #property
 
-        constructor() {
-          this.#property = 'test'
-        }
+      //   constructor() {
+      //     this.#property = 'test'
+      //   }
 
-        #privateMethod() {
-          return 'hello world'
-        }
+      //   #privateMethod() {
+      //     return 'hello world'
+      //   }
 
         // getPrivateMessage() {
         //    return this.#property
@@ -437,15 +437,19 @@
         // getPrivateMethod(){
         //   return this.#privateMethod()
         // }
-      }
-      let a = new Something()
-      console.log(a.getPrivateMessage())
-      console.log(a.getPrivateMethod())
+      // }
+      // let a = new Something()
+      // console.log(a.getPrivateMessage())
+      // console.log(a.getPrivateMethod())
       // const instance = new Something()
       // console.log(instance.property) //=> undefined
       // console.log(instance.privateMethod) //=> undefined
       // console.log(instance.getPrivateMessage()) //=> test
       // console.log(instance.#property); //=> Syntax error
+
+let value=localStorage.getItem('obj')
+
+console.log(value);
     </script>
   </body>
 </html>
